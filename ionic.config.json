@@ -1,5 +1,7 @@
 {
-  "name": "Revenant Hollow Admin",
-  "integrations": {},
+  "name": "admin-app",
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "react"
 }

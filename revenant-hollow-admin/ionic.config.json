@@ -1,7 +1,0 @@
-{
-  "name": "Revenant Hollow Admin",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "react"
-}
