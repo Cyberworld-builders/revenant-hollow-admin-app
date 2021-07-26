@@ -5,7 +5,7 @@ import ExploreContainer from '../components/ExploreContainer';
 import LocationList from '../components/LocationList';
 import './Page.css';
 
-const PageLocations: React.FC = () => {
+const LocationListPage: React.FC = () => {
 
   const { name } = useParams<{ name: string; }>();
 
@@ -34,4 +34,4 @@ const PageLocations: React.FC = () => {
   );
 };
 
-export default PageLocations;
+export default LocationListPage;
