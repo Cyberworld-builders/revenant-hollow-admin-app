@@ -1,6 +1,8 @@
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import { useParams } from 'react-router';
+import axios from 'axios';
 import ExploreContainer from '../components/ExploreContainer';
+import LocationList from '../components/LocationList';
 import './Page.css';
 
 const PageLocations: React.FC = () => {
@@ -24,7 +26,9 @@ const PageLocations: React.FC = () => {
             <IonTitle size="large">{name}</IonTitle>
           </IonToolbar>
         </IonHeader>
-        
+
+        <LocationList />
+
       </IonContent>
     </IonPage>
   );
