@@ -1,6 +1,7 @@
 import React from 'react';
 
 import axios from 'axios';
+import LocationCard from "./LocationCard";
 
 export default class LocationList extends React.Component {
   state = {
@@ -20,6 +21,11 @@ export default class LocationList extends React.Component {
       <ul>
         { this.state.locations.map(location => <li>{location['name']}</li>)}
       </ul>
+      // <ul>
+      //     { this.state.locations.map(location => <LocationCard>{ location }</LocationCard>)}
+      // </ul>
+
+
     )
   }
 }
