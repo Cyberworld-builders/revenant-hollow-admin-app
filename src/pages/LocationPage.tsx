@@ -2,7 +2,7 @@ import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, Io
 import { useParams } from 'react-router';
 import axios from 'axios';
 import ExploreContainer from '../components/ExploreContainer';
-import LocationList from '../components/LocationList';
+import LocationCard from '../components/LocationCard';
 import './Page.css';
 
 const LocationPage: React.FC = () => {
@@ -16,7 +16,7 @@ const LocationPage: React.FC = () => {
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>
-          <IonTitle>Locations</IonTitle>
+          <IonTitle>Location</IonTitle>
         </IonToolbar>
       </IonHeader>
 
@@ -27,7 +27,7 @@ const LocationPage: React.FC = () => {
           </IonToolbar>
         </IonHeader>
 
-        <LocationList />
+        <LocationCard />
 
       </IonContent>
     </IonPage>

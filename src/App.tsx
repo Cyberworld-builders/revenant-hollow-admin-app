@@ -4,6 +4,7 @@ import { Redirect, Route } from 'react-router-dom';
 import Menu from './components/Menu';
 import Page from './pages/Page';
 import LocationListPage from "./pages/LocationListPage";
+import LocationPage from "./pages/LocationPage";
 import GeoLocation from './pages/GeoLocation';
 
 /* Core CSS required for Ionic components to work properly */
@@ -39,6 +40,10 @@ const App: React.FC = () => {
 
             <Route path="/Locations">
               <LocationListPage />
+            </Route>
+
+            <Route path="/Location/:id">
+              <LocationPage />
             </Route>
 
             <Route path="/GeoLocation">
