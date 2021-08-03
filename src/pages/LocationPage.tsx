@@ -1,4 +1,14 @@
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import {
+  IonButtons,
+  IonContent,
+  IonHeader, IonInput, IonItem, IonLabel,
+  IonList,
+  IonListHeader,
+  IonMenuButton,
+  IonPage,
+  IonTitle,
+  IonToolbar
+} from '@ionic/react';
 import { useParams } from 'react-router';
 import axios from 'axios';
 import ExploreContainer from '../components/ExploreContainer';
@@ -7,6 +17,7 @@ import './Page.css';
 
 const LocationPage: React.FC = () => {
 
+  const { id } = useParams<{ id: string; }>();
   const { name } = useParams<{ name: string; }>();
 
   return (
@@ -23,11 +34,15 @@ const LocationPage: React.FC = () => {
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">{name}</IonTitle>
+            <IonTitle size="large">{name}jkjkjkjkjkjk</IonTitle>
           </IonToolbar>
         </IonHeader>
 
-        <LocationCard />
+        <LocationCard LocationId={id} LocationName={name}/>
+
+
+
+
 
       </IonContent>
     </IonPage>

@@ -22,20 +22,23 @@ export default class LocationList extends React.Component {
     return (
       <ul>
           { this.state.locations.map(location =>
-              <IonCard>
-                <IonItem>
-                  <IonIcon icon={skull} slot="start" />
-                  <IonLabel>{location['name']}</IonLabel>
-                  <IonLabel>{location['ip']}</IonLabel>
-                  <IonLabel>Lat/Long: {location['latitude']}, {location['longitude']}</IonLabel>
+              <li key={location['id']}>
+                <IonCard>
+                  <IonItem>
+                    <IonIcon icon={skull} slot="start" />
+                    <IonLabel>{location['name']}</IonLabel>
+                    <IonLabel>{location['ip']}</IonLabel>
+                    <IonLabel>Lat/Long: {location['latitude']}, {location['longitude']}</IonLabel>
 
-                  <IonButton routerLink={'/Location/' + location['id']}  fill="outline" slot="end">View</IonButton>
-                </IonItem>
+                    <IonButton routerLink={'/Location/' + location['id']}  fill="outline" slot="end">View</IonButton>
+                  </IonItem>
 
-                <IonCardContent>
-                  {location['description']}
-                </IonCardContent>
-              </IonCard>
+                  <IonCardContent>
+                    {location['description']}
+                  </IonCardContent>
+                </IonCard>
+              </li>
+
           )}
       </ul>
 
